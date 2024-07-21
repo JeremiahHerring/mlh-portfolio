@@ -43,5 +43,18 @@ class TestTimelinePost(unittest.TestCase):
         assert retrieved_posts[1].email == 'jane@example.com'
         assert retrieved_posts[1].content == 'Hello world, I\'m Jane!'
 
+    def test_create_post_invalid_data(self):
+        with self.assertRaises(IntegrityError):
+            TimelinePost.create(name='Incomplete Post', email='incomplete@example.com')
+
+    def test_delete_post(self):
+        post = TimelinePost.create(name='John Doe', email='john@example.com', content='Hello world, I\'m John!')
+        post.delete_instance()
+
+        # Verify that the post has been deleted
+        posts = list(TimelinePost.select())
+        self.assertEqual(len(posts), 0)
+
 if __name__ == '__main__':
     unittest.main()
+
