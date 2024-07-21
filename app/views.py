@@ -1,37 +1,68 @@
+# views.py
 from flask import Blueprint, render_template, request
-from app import data
+import os
+from .data import get_general_info, get_work_experience, get_skills, get_education, get_hobbies, get_projects, get_social_media
 
 views = Blueprint('views', __name__, template_folder='templates')
 
-
-# Hero Page
 @views.route('/')
-def hero():
-    return render_template('hero.html')
+def index():
+    general_info = get_general_info()
+    work_experience = get_work_experience()
+    skills = get_skills()
+    education = get_education()
+    social_media = get_social_media()
+    
+    return render_template('index.html', 
+        title='MLH Fellow', 
+        url=os.getenv('URL'), 
+        name=general_info['name'],
+        shortIntro=general_info['shortIntro'], 
+        longIntro=general_info['longIntro'], 
+        work=work_experience, 
+        skills=skills,
+        education=education, 
+        email=general_info['email'], 
+        facebook=social_media['facebook'], 
+        instagram=social_media['instagram'],
+        github=social_media['github'], 
+        linkedin=social_media['linkedin'], 
+        twitter=social_media['twitter'], 
+        profilepic=general_info['profilepic']
+    )
 
-# About Me
-@views.route('/aboutme')
-def about_me():
-    return render_template('routes/aboutme/about_me.html', navbar=data.NavBarItems, footer=data.FooterItems, timeline=data.WorkExperience)
-
-# Blogs
 @views.route('/hobbies')
-def blog():
-    return render_template('routes/hobbies/hobbies.html', navbar=data.NavBarItems, footer=data.FooterItems, data=data.HobbyHeader, hobbies=data.Hobby)
+def hobbies():
+    hobbies = get_hobbies()
+    general_info = get_general_info()
+    social_media = get_social_media()
+    
+    return render_template('hobbies.html', 
+        title="Hobbies", 
+        url=os.getenv("URL"),
+        hobbies=hobbies,
+        email=general_info['email'], 
+        facebook=social_media['facebook'], 
+        instagram=social_media['instagram'],
+        github=social_media['github'], 
+        linkedin=social_media['linkedin'], 
+        twitter=social_media['twitter']
+    )
 
-# Projects
 @views.route('/projects')
-def project():
-    return render_template('routes/projects/projects.html', navbar=data.NavBarItems, footer=data.FooterItems, data=data.ProjectsHeader, projects=data.Projects )
-
-@views.route('/experience')
-def experience():
-    return render_template('routes/experience/experience.html', navbar=data.NavBarItems, footer=data.FooterItems, timeline=data.WorkExperience)
-
-@views.route('/map')
-def map():
-    return render_template('routes/map/map.html', navbar=data.NavBarItems, footer=data.FooterItems)
-
-@views.route('/timeline')
-def timeline():
-    return render_template('routes/timeline/timeline.html')
+def projects():
+    projects = get_projects()
+    general_info = get_general_info()
+    social_media = get_social_media()
+    
+    return render_template('projects.html', 
+        title="Projects", 
+        url=os.getenv("URL"),
+        project_rows=projects,
+        email=general_info['email'], 
+        facebook=social_media['facebook'], 
+        instagram=social_media['instagram'],
+        github=social_media['github'], 
+        linkedin=social_media['linkedin'], 
+        twitter=social_media['twitter']
+    )
