@@ -5,11 +5,11 @@ services:
     build: .
     restart: always
     env_file:
-      - .example.env
+      - example.env
     environment:
       - FLASK_ENV=development
     ports:
-      - "5001:5001"
+      - "5000:5000"
     volumes:
       - .:/myportfolio
     depends_on:
@@ -24,5 +24,5 @@ services:
     volumes:
       - mydatabase:/var/lib/mysql
   
-  volumes:
-    mydatabase:
+volumes:
+  mydatabase:
