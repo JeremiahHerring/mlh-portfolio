@@ -13,3 +13,5 @@ docker compose -f docker-compose.yml down
 
 # Spin the container up
 docker compose -f docker-compose.yml up -d --build
+
+chmod +x /root/mlh-portfolio/redeploy-site.sh
