@@ -9,7 +9,7 @@ services:
     environment:
       - FLASK_ENV=development
     ports:
-      -"5001":"5001"
+      - "5001:5001"
     volumes:
       -.:/myportfolio
     depends_on:
