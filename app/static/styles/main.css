@@ -42,7 +42,7 @@ img {
 }
 
 #navbar a{
-color: #ff8c00;
+color: #002D62;
 }
 
 #navbar li{
@@ -99,7 +99,7 @@ width: 200px;
 .profile h2 {
   font-size: 20px;
   font-weight: 700;
-  color: #ff8c00;
+  color: white;
 }
 
 .profile img {
@@ -217,52 +217,52 @@ width: 200px;
 
 .fa-facebook {
   background: #343a40;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .fa-twitter {
   background: #343a40;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .fa-instagram {
   background: #343a40;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .fa-linkedin {
   background: #343a40;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .fa-github {
   background: #343a40;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .footer-left .fa-facebook {
   background: black;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .footer-left .fa-twitter {
   background: black;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .footer-left .fa-instagram {
   background: black;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .footer-left .fa-linkedin {
   background: black;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 .footer-left .fa-github {
   background: black;
-  color: #ff8c00;
+  color: #002D62;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
@@ -576,7 +576,7 @@ section {
 
 .navbar-nav {
   margin-left: 1rem;
-  color:#ff8c00 !important;
+  color:#002D62 !important;
 }
 }
 .area{
