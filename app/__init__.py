@@ -7,13 +7,17 @@ from peewee import *
 from playhouse.shortcuts import model_to_dict
 from dotenv import load_dotenv
 
+load_dotenv()
+
 app = Flask(__name__)
 
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
-    load_dotenv()
+    if not all([os.getenv("MYSQL_DATABASE"), os.getenv("MYSQL_USER"), os.getenv("MYSQL_PASSWORD"), os.getenv("MYSQL_HOST")]):
+        raise ValueError("Database configuration is missing in environment variables")
+
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                          user=os.getenv("MYSQL_USER"),
                          password=os.getenv("MYSQL_PASSWORD"),
