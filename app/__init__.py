@@ -7,16 +7,13 @@ from peewee import *
 from playhouse.shortcuts import model_to_dict
 from dotenv import load_dotenv
 
-load_dotenv()
-
-app = Flask(__name__)
-
 app = Flask(__name__)
 
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
+    load_dotenv()
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                          user=os.getenv("MYSQL_USER"),
                          password=os.getenv("MYSQL_PASSWORD"),
