@@ -13,6 +13,7 @@ app = Flask(__name__)
 
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
+    print("Hello World? ")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
     if not all([os.getenv("MYSQL_DATABASE"), os.getenv("MYSQL_USER"), os.getenv("MYSQL_PASSWORD"), os.getenv("MYSQL_HOST")]):
