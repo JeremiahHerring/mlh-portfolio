@@ -11,36 +11,19 @@ load_dotenv()
 
 app = Flask(__name__)
 
-app = Flask(__name__)
-
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
+    if not all([os.getenv("MYSQL_DATABASE"), os.getenv("MYSQL_USER"), os.getenv("MYSQL_PASSWORD"), os.getenv("MYSQL_HOST")]):
+        raise ValueError("Database configuration is missing in environment variables")
+
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                          user=os.getenv("MYSQL_USER"),
                          password=os.getenv("MYSQL_PASSWORD"),
                          host=os.getenv("MYSQL_HOST"),
                          port=3306
                          )
-
-# Retrieve database configuration from environment variables
-db_name = os.getenv("MYSQL_DATABASE")
-db_user = os.getenv("MYSQL_USER")
-db_password = os.getenv("MYSQL_PASSWORD")
-db_host = os.getenv("MYSQL_HOST")
-
-if not db_name or not db_user or not db_password or not db_host:
-    raise ValueError("Database configuration is missing in environment variables")
-
-# Initialize database connection
-mydb = MySQLDatabase(
-    db_name,
-    user=db_user,
-    password=db_password,
-    host=db_host,
-    port=3306
-)
 
 class TimelinePost(Model):
     name = CharField()
