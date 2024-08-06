@@ -13,12 +13,10 @@ app = Flask(__name__)
 
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
-    print("Hello World? ")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
     if not all([os.getenv("MYSQL_DATABASE"), os.getenv("MYSQL_USER"), os.getenv("MYSQL_PASSWORD"), os.getenv("MYSQL_HOST")]):
         raise ValueError("Database configuration is missing in environment variables")
-    print("We in this phase")
 
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                          user=os.getenv("MYSQL_USER"),
