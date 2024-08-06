@@ -26,9 +26,9 @@ jobs:
         run: python3-virtualenv/bin/pip install -r requirements.txt
 
       - name: Make run_test.sh executable
-        run: chmod +x ./run_test.sh
+        run: chmod +x ./run-test.sh
 
       - name: Run Tests
         env:
           TESTING: true
-        run: ./run_test.sh
+        run: ./run-test.sh
