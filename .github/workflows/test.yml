@@ -25,15 +25,8 @@ jobs:
       - name: Install Dependencies
         run: python3-virtualenv/bin/pip install -r requirements.txt
 
-      - name: Make run-test.sh executable
-        run: chmod +x ./run-test.sh
+      - name: Make run_test.sh executable
+        run: chmod +x ./run_test.sh
 
       - name: Run Tests
-        env:
-          URL: ${{ secrets.URL }}
-          MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
-          MYSQL_USER: ${{ secrets.MYSQL_USER }}
-          MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
-          MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
-          TESTING: true
-        run: ./run-test.sh
+        run: ./run_test.sh
