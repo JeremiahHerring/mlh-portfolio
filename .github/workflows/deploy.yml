@@ -35,5 +35,15 @@ jobs:
       - name: Print Container Status
         run: ssh my-vps 'cd ~/mlh-portfolio && docker compose ps'
 
-      - name: Send Message to Discord Bot
+  notify:
+    name: "Notify Discord"
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Send Deployment Success Message to Discord
+        if: success()
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+
+      - name: Send Deployment Failed Message to Discord
+        if: failure()
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
