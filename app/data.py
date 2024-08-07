@@ -25,7 +25,7 @@ skills = [
 
 # Education
 education = [
-    {'type': 'Bachelors of Computer Science', 'from': 'California State University', 'when': '2021 - Present', 'desc': 'Computers are cool!', 'link': './static/img/csuf.png'}
+    {'type': 'Bachelors of Computer Science', 'from': 'California State University', 'when': '2021 - Present', 'desc': 'ACM Member, ECS ICC Chair', 'link': './static/img/csuf.png'}
 ]
 
 # Hobbies
