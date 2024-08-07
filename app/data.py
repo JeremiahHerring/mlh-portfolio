@@ -38,7 +38,7 @@ hobbies = [
 # Projects
 projects = [
     [
-        {'name': 'FullyHacks', 'tag': 'Website for CSUF Hackathon', 'tools': 'Next.js, TailwincCSS, Prisma, MongoDB', 'link': 'https://github.com/fullyhacks2024', 'img': './static/img/projects/fullyhacks.png'},
+        {'name': 'FullyHacks', 'tag': 'Website for CSUF Hackathon!', 'tools': 'Next.js, TailwincCSS, Prisma, MongoDB', 'link': 'https://github.com/fullyhacks2024', 'img': './static/img/projects/fullyhacks.png'},
         {'name': 'VitaMatch', 'tag': 'Vitamin Recommendation Website', 'tools': 'HTML, CSS, JavaScript', 'link': 'github.com/jeremiahherring/vitaminapp', 'img': './static/img/projects/vitamatch.png'},
         {'name': 'QuickReadAI', 'tag': 'AI Web Content Summarizer', 'tools': 'React, CSS, JavaScript', 'link': 'github.com/jeremiahherring/quickread-ai', 'img': './static/img/projects/quickreadai.png'}
     ]
