@@ -1,14 +1,13 @@
-```markdown
-# Portfolio Site
+### Portfolio Site
 
 Welcome to my portfolio site! This document provides instructions on how to set up and run the application locally.
 
-## Prerequisites
+### Prerequisites
 
 - Python 3.x
 - pip (Python package installer)
 
-## Getting Started
+### Getting Started
 
 Follow these steps to set up your local environment:
 
@@ -19,7 +18,6 @@ First, clone the repository to your local machine:
 ```bash
 git clone [<repository_url>](https://github.com/JeremiahHerring/mlh-portfolio)
 cd mlh-portfolio
-```
 
 ### 2. Create a Virtual Environment
 
