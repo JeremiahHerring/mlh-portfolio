@@ -15,15 +15,14 @@ Follow these steps to set up your local environment:
 
 First, clone the repository to your local machine:
 
-```bash
+```
 git clone [<repository_url>](https://github.com/JeremiahHerring/mlh-portfolio)
 cd mlh-portfolio
-
+```
 ### 2. Create a Virtual Environment
 
 Create a virtual environment to manage your project's dependencies:
-
-```bash
+```
 python -m venv venv
 ```
 
