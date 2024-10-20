@@ -16,7 +16,7 @@ Follow these steps to set up your local environment:
 First, clone the repository to your local machine:
 
 ```
-git clone [<repository_url>](https://github.com/JeremiahHerring/mlh-portfolio)
+git clone https://github.com/JeremiahHerring/mlh-portfolio
 cd mlh-portfolio
 ```
 ### 2. Create a Virtual Environment
