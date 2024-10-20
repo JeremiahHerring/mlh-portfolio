@@ -11,8 +11,37 @@ general_info = {
 
 # Work Experience
 work_experience = [
-    {'jobTitle': 'Software Engineer', 'desc': "Artificial Intelligence, Machine Learning, Big DaTA", 'year': "2018 - Present", 'link':'./static/img/sandia.png'}
+    {
+        'jobTitle': 'Software Engineer Intern',
+        'desc': (
+            "Refactored a tool that allowed for the addition of notes to a set of source code differences, "
+            "providing analysts to add commentary about specific changes in code without modifying either version of the code being compared.\n"
+            "Finetuned an LLM that could scan and sort project abstract reports based on relevance to sponsor interests, "
+            "which sped up the manual review methods by 80% and allowed for 500+ projects to be reviewed simultaneously."
+        ),
+        'year': "May 2025 - Present",
+        'link': './static/img/sandia.png'
+    },
+    {
+        'jobTitle': 'Production Engineer Fellow',
+        'desc': (
+            "Secured position in the production engineering fellowship with Meta placing in the top 2% of applications.\n"
+            "Collaborated closely with 2 Meta engineers and 12 other fellows to build individual projects integrating principles such as automated testing, scripting, containers, continuous integration and development, and troubleshooting."
+        ),
+        'year': "July 2025 - September 2025",
+        'link': './static/img/meta.png'
+    },
+    {
+        'jobTitle': 'Information Technology Specialist',
+        'desc': (
+            "Resolved over 100 hardware and software issues for health center staff, leading to a 20% improvement in operational efficiency and reducing downtime across daily tasks.\n"
+            "Managed a large employee database that was critical for tracking staff and patient records, ensuring accurate and efficient record-keeping for the health center’s operations."
+        ),
+        'year': "November 2024 - May 2025",
+        'link': './static/img/csuf.png'
+    },
 ]
+
 
 # Skills
 skills = [
@@ -20,12 +49,18 @@ skills = [
     './static/img/skillicons/css.png',
     './static/img/skillicons/javascript.png',
     './static/img/skillicons/python.png',
-    './static/img/skillicons/sql.png'
+    './static/img/skillicons/express.png',
+    './static/img/skillicons/figma.png',
+    './static/img/skillicons/flask.png',
+    './static/img/skillicons/github.png',
+    './static/img/skillicons/graphql.png',
+    './static/img/skillicons/mongodb.png',
+    './static/img/skillicons/react.png',
 ]
 
 # Education
 education = [
-    {'type': 'Bachelors of Computer Science', 'from': 'California State University', 'when': '2021 - Present', 'desc': 'Computers are cool!', 'link': './static/img/csuf.png'}
+    {'type': 'Bachelors of Computer Science', 'from': 'California State University', 'when': '2021 - Present', 'desc': 'Magna Cum Laude. President of Association of Computing Machinery', 'link': './static/img/csuf.png'}
 ]
 
 # Hobbies
@@ -49,7 +84,7 @@ social_media = {
     'facebook': 'facebook.com',
     'github': 'github.com/jeremiahherring',
     'instagram': 'instagram.com/jeremiah.herring7',
-    'linkedin': 'linkedin.com/jeremiahherring',
+    'linkedin': 'linkedin.com/in/jeremiahherring',
     'twitter': 'twitter.com'
 }
 

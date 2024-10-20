@@ -42,7 +42,7 @@ img {
 }
 
 #navbar a{
-color: #002D62;
+color: #fff;
 }
 
 #navbar li{
@@ -217,52 +217,52 @@ width: 200px;
 
 .fa-facebook {
   background: #343a40;
-  color: #002D62;
+  color: #fff;
 }
 
 .fa-twitter {
   background: #343a40;
-  color: #002D62;
+  color: #fff;
 }
 
 .fa-instagram {
   background: #343a40;
-  color: #002D62;
+  color: #fff;
 }
 
 .fa-linkedin {
   background: #343a40;
-  color: #002D62;
+  color: #fff;
 }
 
 .fa-github {
   background: #343a40;
-  color: #002D62;
+  color: #fff;
 }
 
 .footer-left .fa-facebook {
   background: black;
-  color: #002D62;
+  color: #fff;
 }
 
 .footer-left .fa-twitter {
   background: black;
-  color: #002D62;
+  color: #fff;
 }
 
 .footer-left .fa-instagram {
   background: black;
-  color: #002D62;
+  color: #fff;
 }
 
 .footer-left .fa-linkedin {
   background: black;
-  color: #002D62;
+  color: #fff;
 }
 
 .footer-left .fa-github {
   background: black;
-  color: #002D62;
+  color: #fff;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
