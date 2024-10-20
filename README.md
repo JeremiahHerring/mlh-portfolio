@@ -83,5 +83,3 @@ Your portfolio site should now be running at `http://127.0.0.1:5000/`. You can o
 ## Additional Information
 
 Feel free to explore the code, and don’t hesitate to reach out if you have any questions or feedback!
-
-```
